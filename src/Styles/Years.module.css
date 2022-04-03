@@ -1,0 +1,12 @@
+.container {
+  width: 100%;
+  margin: 0.5rem 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.year {
+  width: 15%;
+}

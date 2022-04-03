@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Teko:wght@400;500;600;700&display=swap');
+
+:root {
+  --fontOne: 'Teko', sans-serif;
+  --fontTwo: 'Source Sans Pro', sans-serif;
+  --fontThree: 'Italianno', cursive;
+}

@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url('./Assets/gt40Mobile5.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

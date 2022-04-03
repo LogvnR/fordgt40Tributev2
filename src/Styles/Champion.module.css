@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.champion {
+  text-align: center;
+  font-family: var(--fontThree);
+  font-size: 7vw;
+  color: white;
+  letter-spacing: 1px;
+  margin: 0.5em 0 0;
+}
