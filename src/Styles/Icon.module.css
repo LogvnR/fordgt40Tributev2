@@ -33,6 +33,7 @@
 }
 
 .modal-container {
+  max-height: 75%;
   box-sizing: border-box;
   background-color: white;
   display: flex;
@@ -74,7 +75,8 @@
 .content {
   font-size: 4vw;
   font-family: var(--fontTwo);
-  margin: 0 0.5rem 0.5rem;
+  margin: 0 0.7rem 0.5rem;
+  overflow-y: scroll;
 }
 
 .invisible {
