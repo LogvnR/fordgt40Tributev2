@@ -5,7 +5,9 @@
 .icon-container {
   width: 45px;
   height: 45px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  border: 2px solid white;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
@@ -14,7 +16,7 @@
 
 .icon {
   font-size: 5.2vw;
-  color: var(--black);
+  color: white;
 }
 
 .modal {
@@ -73,9 +75,7 @@
 }
 
 .content {
-  font-size: 4vw;
-  font-family: var(--fontTwo);
-  margin: 0 0.7rem 0.5rem;
+  margin: 0 0.8rem 0.7rem;
   overflow-y: scroll;
 }
 

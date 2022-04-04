@@ -3,17 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import classes from '../../Styles/Icon.module.css';
+import Content from './Content';
 
 const Icon = (props) => {
   const [modal, setModal] = useState(false);
-  // const open = () => {
-  //   props.option(true);
-  //   props.action();
-  // };
-
-  // const close = () => {
-  //   props.option(false);
-  // };
 
   const modalHandler = () => {
     setModal(!modal);
@@ -40,6 +33,7 @@ const Icon = (props) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className={classes.modal}
+            onClick={modalHandler}
           >
             <motion.div
               initial={{ opacity: 0, y: 200 }}
@@ -61,13 +55,21 @@ const Icon = (props) => {
                 <p className={classes.title}>{props.title}</p>
               </div>
 
-              <p className={classes.content}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                non felis tellus. Curabitur iaculis nibh eu eleifend pharetra.
-                Nunc molestie est id ante facilisis bibendum. Donec egestas nibh
-                eros, et dictum mi lacinia ultrices. Duis sodales dui purus.
-                Vivamus porta aliquam magna, eget mattis arcu semper nec.
-              </p>
+              <div className={classes.content}>
+                <Content content={props.content1} />
+                <Content content={props.content2} />
+                <Content content={props.content3} />
+                <Content content={props.content4} />
+                <Content content={props.content5} />
+                <Content content={props.content6} />
+                <Content content={props.content7} />
+                <Content content={props.content8} />
+                <Content content={props.content9} />
+                <Content content={props.content10} />
+                <Content content={props.content11} />
+                <Content content={props.content12} />
+                <Content content={props.content13} />
+              </div>
             </motion.div>
           </motion.div>
         )}
