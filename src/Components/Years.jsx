@@ -1,5 +1,3 @@
-import React from 'react';
-
 import classes from '../Styles/Years.module.css';
 
 import sixty6 from '../Assets/win-66.png';

@@ -1,9 +1,12 @@
+import { useEffect } from 'react';
 import {
   faGear,
   faCar,
   faScrewdriverWrench,
   faFlagCheckered,
 } from '@fortawesome/free-solid-svg-icons';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import classes from '../Styles/Information.module.css';
 import Icon from './UI/Icon';
@@ -14,8 +17,24 @@ import development from '../Assets/development.jpg';
 import leMans from '../Assets/leMans.jpg';
 
 const Information = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-back',
+      animatedClassName: 'animated',
+    });
+    AOS.refresh();
+  }, []);
+
   return (
-    <div className={classes.container}>
+    <div
+      data-aos="fade"
+      data-aos-easing="ease-in-out"
+      data-aos-delay="1500"
+      data-aos-duration="1000"
+      data-aos-once="false"
+      className={classes.container}
+    >
       <Icon image={specs} title="Specifications" icon={faGear} />
       <Icon
         image={ferrari}
