@@ -10,4 +10,5 @@
   --tan: #fff4d4;
   --lightBlue: #daf0fe;
   --white: #f7f7ff;
+  --fontMd: clamp(20px, 7vw, 32px);
 }

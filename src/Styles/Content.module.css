@@ -4,3 +4,16 @@
   font-family: var(--fontTwo);
   font-weight: 400;
 }
+
+@media only screen and (min-width: 1024px) {
+  .content {
+    font-size: 18px;
+    color: var(--tan);
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .content {
+    font-size: 22px;
+  }
+}

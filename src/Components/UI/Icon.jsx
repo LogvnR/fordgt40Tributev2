@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -7,24 +7,54 @@ import Content from './Content';
 
 const Icon = (props) => {
   const [modal, setModal] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   const modalHandler = () => {
     setModal(!modal);
   };
 
+  const screenWidth = screen.width;
+
+  useEffect(() => {
+    if (screenWidth >= 1024) {
+      setIsDesktop(true);
+    } else {
+      setIsDesktop(false);
+    }
+  }, [screenWidth]);
+
   return (
     <motion.div layout className={classes.container}>
-      <motion.div
-        whileTap={{ scale: 0.9 }}
-        onClick={modalHandler}
-        className={
-          modal
-            ? `${classes['icon-container']} ${classes.invisible}`
-            : classes['icon-container']
-        }
-      >
-        <FontAwesomeIcon className={classes.icon} icon={props.icon} />
-      </motion.div>
+      {!isDesktop && (
+        <motion.div
+          whileTap={{ scale: 0.9 }}
+          onClick={modalHandler}
+          className={
+            modal
+              ? `${classes['icon-container']} ${classes.invisible}`
+              : classes['icon-container']
+          }
+        >
+          <FontAwesomeIcon className={classes.icon} icon={props.icon} />
+        </motion.div>
+      )}
+      {isDesktop && (
+        <motion.div
+          whileTap={{ scale: 0.9 }}
+          onClick={modalHandler}
+          className={
+            modal
+              ? `${classes['icon-container_desktop']} ${classes.invisible}`
+              : classes['icon-container_desktop']
+          }
+        >
+          <FontAwesomeIcon
+            className={classes['icon-desktop']}
+            icon={props.icon}
+          />
+          <p className={classes['title-desktop']}>{props.title}</p>
+        </motion.div>
+      )}
 
       <AnimatePresence>
         {modal && (

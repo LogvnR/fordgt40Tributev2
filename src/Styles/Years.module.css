@@ -8,5 +8,5 @@
 }
 
 .year {
-  width: 15%;
+  width: clamp(45px, 15%, 80px);
 }

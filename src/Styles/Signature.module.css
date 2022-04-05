@@ -6,6 +6,12 @@
 }
 
 .sig {
-  width: 50%;
+  width: clamp(150px, 50%, 245px);
   transform: rotate(-15deg);
+}
+
+@media only screen and (min-width: 1024px) {
+  .sig {
+    margin-right: 2rem;
+  }
 }

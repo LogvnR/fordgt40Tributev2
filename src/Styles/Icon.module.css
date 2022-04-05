@@ -19,6 +19,37 @@
   color: white;
 }
 
+.icon-container_desktop {
+  width: 220px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(1px);
+  border: 2px solid var(--lightBlue);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: border 0.25s ease-in-out;
+}
+
+.icon-desktop {
+  font-size: 25px;
+  color: white;
+  transition: color 0.25s ease-in-out;
+}
+
+.title-desktop {
+  margin: 0.2rem 0 0;
+  font-size: 25px;
+  color: white;
+  font-family: var(--fontOne);
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.25s ease-in-out;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -81,4 +112,46 @@
 
 .invisible {
   visibility: hidden;
+}
+
+@media only screen and (min-width: 1024px) {
+  .icon-container_desktop:hover {
+    border: 2px solid var(--red);
+    transition: border 0.25s ease-in-out;
+  }
+
+  .icon-container_desktop:hover .icon-desktop {
+    color: var(--red);
+    transition: color 0.25s ease-in-out;
+  }
+
+  .icon-container_desktop:hover .title-desktop {
+    color: var(--red);
+    transition: color 0.25s ease-in-out;
+  }
+
+  .modal-container {
+    width: 40%;
+    max-height: 90%;
+    background-color: var(--black);
+  }
+  .title-container {
+    color: var(--tan);
+  }
+
+  .modal-icon {
+    font-size: 30px;
+  }
+  .title {
+    font-size: 45px;
+  }
+
+  .content::-webkit-scrollbar {
+    display: none;
+  }
+
+  .content {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }

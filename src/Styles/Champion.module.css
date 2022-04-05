@@ -8,8 +8,14 @@
 .champion {
   text-align: center;
   font-family: var(--fontThree);
-  font-size: 7vw;
-  color: white;
+  font-size: var(--fontMd);
+  color: var(--lightBlue);
   letter-spacing: 1px;
   margin: 0.5em 0 0;
+}
+
+@media only screen and (min-width: 1920px) {
+  .champion {
+    font-size: clamp(20px, 7vw, 42px);
+  }
 }
