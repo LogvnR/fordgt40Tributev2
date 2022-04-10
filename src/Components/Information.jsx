@@ -16,7 +16,18 @@ import leMans from '../Assets/leMans.jpg';
 const Information = () => {
   return (
     <div className={classes.container}>
-      <Icon image={specs} title="Specifications" icon={faGear} />
+      <Icon
+        image={specs}
+        title="Specifications"
+        icon={faGear}
+        content1="Engine: 7.0L 427ci V8"
+        content2="Power: 485bhp @ 6200rpm"
+        content3="Torque: 475lb ft @ 4000rpm"
+        content4="Weight: 1,215Kgs/2,678Lbs"
+        content5="Top Speed: 329Kph/205Mph"
+        content6="0-60mph: 3.7s"
+        content7="Layout: Middle Engine, Rear Wheel Drive (MR)"
+      />
       <Icon
         image={ferrari}
         title="Ferrari"
